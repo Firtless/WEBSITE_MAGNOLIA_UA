@@ -1,0 +1,333 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: rgb(236, 230, 223);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    flex-direction: column; 
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    touch-action: manipulation;
+}
+
+main {
+    flex: 1;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #595d66;
+    padding: 10px 20px;
+    flex-wrap: nowrap; /* Prevent wrapping on mobile */
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.nav__links {
+    display: flex;
+    flex-direction: row; /* Force items to stay in a row */
+    gap: 20px;
+}
+
+.nav__links li {
+    list-style: none;
+}
+
+.nav__links a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.nav__links a:hover {
+    color: rgb(100, 58, 126);
+    text-shadow: 0px 0px 3px #333333;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+button, input, select, textarea {
+    touch-action: manipulation;
+}
+
+.buy_island, .icon-cart, .cartTab button, .footer, .header, .search, .social-icon, .f_text, .footer-left, .footer-right{
+    touch-action: manipulation;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.order-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.order-item-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.order-summary, .payment-details {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.final_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#total-price {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.rtrn {
+    background-color: #855bb0; 
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.rtrn:hover {
+    background-color: #6e4075; /* Darker Green on Hover */
+}
+
+
+.order-summary h2, .payment-details h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#order-items {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+#order-items div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#order-items div span {
+    font-size: 14px;
+}
+
+#total-price {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.btn-confirm {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-confirm:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+    opacity: 0.7;
+}
+
+.confirmation-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Footer Styling ///////////////////////// */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: #595d66;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px; /* Reduced height */
+    flex-wrap: nowrap; /* Ensure everything fits in one row */
+}
+
+.footer-left {
+    flex: 1; /* Allocate equal space for text */
+    text-align: left;
+}
+
+.f_text {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    font-size: 14px; /* Adjust font size for mobile */
+    line-height: 1.2;
+    margin: 2px 0;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icons */
+    margin-left: auto;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px; /* Smaller icons for mobile */
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgb(66, 56, 67); /* Match background */
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 200px; /* Smaller logo for small screens */
+        margin-left: -5px;
+    }
+
+    .nav__links a {
+        font-size: 19px; /* Smaller font for links */
+    }
+
+    .order-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .order-summary, .payment-details {
+        width: 100%;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .btn-confirm {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    label, input, select {
+        font-size: 12px;
+    }
+
+    #order-items div span {
+        font-size: 12px;
+    }
+
+    #total-price {
+        font-size: 16px;
+    }
+
+
+}

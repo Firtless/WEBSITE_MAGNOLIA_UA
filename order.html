@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Оформлення Замовлення</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+        <link rel="stylesheet" href="order.css"> 
+    </head>
+    <body>
+        
+        <header>
+            <img class="logo" src="/img/MagnoliaUa1Logo.png" alt="logo">
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="home.html">Каталог</a></li>
+                    <li><a href="about.html">Про Нас</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!----------- Order Section --------------------------------------------------->
+        <main>
+            <h1>Оформлення Замовлення</h1>
+            <div class="order-container">
+                <!-- Order Summary -->
+                <section class="order-summary">
+                    <h2>Ваше Замовлення</h2>
+                    <div id="order-items">
+                        <!-- Cart items will be displayed here dynamically -->
+                    </div>
+                    <div class ="final_part">
+                     <p id="total-price"><strong>Загальна сума:</strong> ₴0</p>
+                     <button class="rtrn" onclick="window.location.href='home.html'">Переглянути Замовлення</button>
+                     <div id="confirmation-message" class="confirmation-message">
+                        ✔️ Дякуємо за замовлення! Ваше замовлення обробляється. Очікуйте повідомлення на ваш телефое або Email.
+                    </div>
+                    </div>
+                </section>
+
+                <!-- Payment Details -->
+                <section class="payment-details">
+                    <h2>Деталі Оплати</h2>
+                    <form id="payment-form">
+                        <label for="name">Ім'я та Прізвище:</label>
+                        <input type="text" id="name" required>
+
+                        <label for="phone">Телефон або Email:</label>
+                        <input type="text" id="phone" required>
+
+                        <label for="address">Адреса Доставки(Місто, Відділення, Пошта):</label>
+                        <input type="text" id="address" required>
+
+                        <label for="payment-method">Метод оплати:</label>
+                        <select id="payment-method">
+                            <option value="card">Оплата через Контактну Інформацію</option>
+                            <option value="cash">Оплата при Отриманні</option>
+                        </select>
+
+                        <button type="submit" class="btn-confirm">Підтвердити Замовлення</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+
+
+        <!----------- Scripts --------------------------------------------------->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+        (function() {
+            emailjs.init({
+               publicKey: "FoEzoT5hhig1i-8qs", // Replace with your valid public key
+            });
+        })();
+</script>
+        <script src="order.js"></script>
+    </body>
+</html>
